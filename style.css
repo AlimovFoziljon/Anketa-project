@@ -515,24 +515,24 @@ body{
 @keyframes spinningColor {
     0% {
         transform: rotate(360deg);
-        border-top:5px dashed #f56682;
-        border-bottom:5px dashed #387eff;
+        border-top:5px dashed var(--primary-color);
+        border-bottom:5px dashed var(--primary-color);
     }
     25% {
-        border-top:5px dashed #f591a6;
-        border-bottom:5px dashed #6da7f7;
+        border-top:5px dashed var(--primary-color);
+        border-bottom:5px dashed var(--primary-color);
     }
     50% {
-        border-top:5px dashed #fd878e;
-        border-bottom:5px dashed #4ba3ff;
+        border-top:5px dashed var(--primary-color);
+        border-bottom:5px dashed var(--primary-color);
     }
     75% {
-        border-top:5px dashed #f57f8f;
-        border-bottom:5px dashed #569dff;
+        border-top:5px dashed var(--primary-color);
+        border-bottom:5px dashed var(--primary-color);
     }
     100% {
-        border-top:5px dashed #f56682;
-        border-bottom:5px dashed #387eff;
+        border-top:5px dashed var(--primary-color);
+        border-bottom:5px dashed var(--primary-color);
     }
 }
 
