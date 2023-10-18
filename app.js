@@ -1,3 +1,10 @@
+window.addEventListener("load", function() {
+    const loaderWrapper = document.querySelector(".loader__wrapper")
+    const loader = document.querySelector(".loader")
+    loaderWrapper.className += " hidden"
+    loader.className += " hidden"
+})
+
 var fWidth = window.getComputedStyle(document.getElementsByClassName('form__container')[0]).width.slice(0, -2);
 var labels = document.getElementsByClassName('label');
 var inputs = document.getElementsByClassName('input');
@@ -12,13 +19,6 @@ var cellCheck = document.getElementById("cell__check")
 var t = 2500
 var p = 30
 var k = 0.5
-
-window.addEventListener("load", function() {
-    const loaderWrapper = document.querySelector(".loader__wrapper")
-    const loader = document.querySelector(".loader")
-    loaderWrapper.className += " hidden"
-    loader.className += " hidden"
-})
 
 for (i = 0; i < labels.length; i++) {
     var labelWidth = window.getComputedStyle(labels[i]).width.slice(0, -2);
@@ -87,7 +87,6 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 calRange.addEventListener("input", (e) => {
-    console.log(e.target.value);
     if(e.target.value <= 11){
         e.target.value = 11
         calRangeValue.innerHTML = 30 + "m"
@@ -128,18 +127,14 @@ calRange.addEventListener("input", (e) => {
     check()
 })
 
-console.log(radioBtnsOne);
 radioBtnsOne.forEach((e) => {
     e.addEventListener("change", (s) => {
-        console.log(s.target.value)
         k = s.target.value
         check()
     })
 })
-console.log(radioBtnsTwo);
 radioBtnsTwo.forEach((e) => {
     e.addEventListener("change", (s) => {
-        console.log(s.target.value)
         t = s.target.value
         check()
     })
