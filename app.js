@@ -13,6 +13,13 @@ var t = 2500
 var p = 30
 var k = 0.5
 
+window.addEventListener("load", function() {
+    const loaderWrapper = document.querySelector(".loader__wrapper")
+    const loader = document.querySelector(".loader")
+    loaderWrapper.className += "hidden"
+    loader.className += "hidden"
+})
+
 for (i = 0; i < labels.length; i++) {
     var labelWidth = window.getComputedStyle(labels[i]).width.slice(0, -2);
     var inputWidth = fWidth - labelWidth;
