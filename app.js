@@ -20,11 +20,6 @@ var t = 2500
 var p = 30
 var k = 0.5
 
-for (i = 0; i < labels.length; i++) {
-    var labelWidth = window.getComputedStyle(labels[i]).width.slice(0, -2);
-    var inputWidth = fWidth - labelWidth;
-    inputs[i].style.width = inputWidth + 'px';
-}
 
 window.addEventListener("DOMContentLoaded", () => {
     range.addEventListener("input", (e) => {
@@ -148,3 +143,23 @@ function check() {
 }
 
 check()
+
+window.addEventListener("resize", resizeWindow)
+
+function resizeWindow() {
+    if(window.innerWidth < 600){
+        for (i = 0; i < labels.length; i++) {
+            var labelWidth = window.getComputedStyle(labels[i]).width.slice(0, -1);
+            var inputWidth = fWidth - labelWidth;
+            inputs[i].style.width = inputWidth + 'px';
+        }
+    } else{
+        for (i = 0; i < labels.length; i++) {
+            var labelWidth = window.getComputedStyle(labels[i]).width.slice(0, -2);
+            var inputWidth = fWidth - labelWidth;
+            inputs[i].style.width = inputWidth + 'px';
+        }
+    }
+}
+
+resizeWindow()
